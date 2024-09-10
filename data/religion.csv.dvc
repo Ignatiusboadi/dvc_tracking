@@ -1,0 +1,5 @@
+outs:
+- md5: dcd88560a59b9e982e37ab586016a8bd
+  size: 375146
+  hash: md5
+  path: religion.csv
