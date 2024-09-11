@@ -22,3 +22,18 @@ experiments = [
     {"n_estimators": 150, "max_depth": 7}
 ]
 
+for i, params in enumerate(experiments):
+    with mlflow.start_run(run_name=f"Experiment {i + 1}"):
+        rf = RandomForestClassifier(n_estimators=params['n_estimators'],
+                                    max_depth=params['max_depth'],
+                                    random_state=random_state)
+
+        rf.fit(X_train, y_train)
+
+        y_pred = rf.predict(X_test)
+
+        mlflow.log_param("n_estimators", params['n_estimators'])
+        mlflow.log_param("max_depth", params['max_depth'])
+
+        accuracy = accuracy_score(y_test, y_pred)
+        mlflow.log_metric("accuracy", accuracy)
