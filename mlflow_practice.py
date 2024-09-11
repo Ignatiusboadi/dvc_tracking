@@ -10,6 +10,10 @@ from sklearn.metrics import accuracy_score
 
 random_state = 50
 
+iris = datasets.load_iris()
+X = iris.data
+y = iris.target
+
 
 
 
