@@ -16,5 +16,9 @@ y = iris.target
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=random_state)
 
-
+experiments = [
+    {"n_estimators": 50, "max_depth": 3},
+    {"n_estimators": 100, "max_depth": 5},
+    {"n_estimators": 150, "max_depth": 7}
+]
 
