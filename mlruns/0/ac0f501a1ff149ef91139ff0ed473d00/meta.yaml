@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/iboad/PycharmProjects/dvc_tracking/mlruns/0/ac0f501a1ff149ef91139ff0ed473d00/artifacts
+end_time: 1726014695276
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ac0f501a1ff149ef91139ff0ed473d00
+run_name: Experiment 2
+run_uuid: ac0f501a1ff149ef91139ff0ed473d00
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726014693567
+status: 3
+tags: []
+user_id: iboad

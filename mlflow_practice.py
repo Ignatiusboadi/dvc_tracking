@@ -37,3 +37,9 @@ for i, params in enumerate(experiments):
 
         accuracy = accuracy_score(y_test, y_pred)
         mlflow.log_metric("accuracy", accuracy)
+
+        input_example = pd.DataFrame(X_train[:1], columns=iris.feature_names)
+        signature = infer_signature(X_train, rf.predict(X_train))
+
+        mlflow.sklearn.log_model(rf, "random_forest_model", signature=signature, input_example=input_example)
+        print(f"Experiment {i + 1}: Accuracy = {accuracy}")
